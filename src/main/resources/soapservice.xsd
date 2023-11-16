@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/service"
+           elementFormDefault="qualified">
+
+    <!-- Definition for getString method -->
+    <xs:element name="getStringRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="param1" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getStringResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definition for getNumber method -->
+    <xs:element name="getNumberRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="param1" type="xs:string"/>
+                <xs:element name="param2" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getNumberResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+
+<!--<?xml version="1.0"?>
+<definitions name="LaptopService"
+             targetNamespace="http://www.example.com/laptopservice"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:tns="http://www.example.com/laptopservice"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+
+    <types>
+        <xsd:schema targetNamespace="http://www.example.com/laptopservice">
+            <xsd:element name="GetLaptopsRequest">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="manufacturer" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetLaptopsResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="count" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </types>
+
+    <message name="GetLaptopsRequestMessage">
+        <part name="parameters" element="tns:GetLaptopsRequest"/>
+    </message>
+
+    <message name="GetLaptopsResponseMessage">
+        <part name="parameters" element="tns:GetLaptopsResponse"/>
+    </message>
+
+    <portType name="LaptopPortType">
+        <operation name="getLaptopsNumberWithManufacturerName">
+            <input message="tns:GetLaptopsRequestMessage"/>
+            <output message="tns:GetLaptopsResponseMessage"/>
+        </operation>
+    </portType>
+
+    <binding name="LaptopBinding" type="tns:LaptopPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getLaptopsNumberWithManufacturerName">
+            <soap:operation style="document" soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+
+    <service name="LaptopService">
+        <port name="LaptopPort" binding="tns:LaptopBinding">
+            <soap:address location="http://www.example.com/laptopservice"/>
+        </port>
+    </service>
+
+</definitions>
+-->

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/laptop"
+    xmlns="http://example.com/laptop"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+    <xs:element name="Laptop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="manufacturer" type="xs:string" />
+                <xs:element name="screen">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="size" type="xs:string" />
+                            <xs:element name="type" type="xs:string" />
+                            <xs:element name="touchscreen" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="processor">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="physical_cores" type="xs:string" />
+                            <xs:element name="clock_speed" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ram" type="xs:string" />
+                <xs:element name="disc">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="storage" type="xs:string" />
+                            <xs:element name="type" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="graphic_card">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="memory" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="os" type="xs:string" />
+                <xs:element name="disc_reader" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
